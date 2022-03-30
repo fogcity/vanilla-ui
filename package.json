@@ -1,0 +1,48 @@
+{
+  "name": "ui",
+  "description": "Zero-runtime component-in-TypeScript",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/*": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vanilla-extract/dynamic": "^2.0.2",
+    "polished": "^4.1.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@vanilla-extract/css": "^1.6.8",
+    "@vanilla-extract/private": "^1.0.3",
+    "@vanilla-extract/sprinkles": "^1.4.0",
+    "@vanilla-extract/vite-plugin": "^3.1.4",
+    "@vitejs/plugin-react": "^1.0.7",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
+    "vite-plugin-dts": "^1.0.2"
+  }
+}
